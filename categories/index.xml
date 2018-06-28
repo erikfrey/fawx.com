@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on fawx</title>
+    <link>http://fawx.com/categories/</link>
+    <description>Recent content in Categories on fawx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://fawx.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Life</title>
+      <link>http://fawx.com/categories/life/</link>
+      <pubDate>Thu, 19 Mar 2015 15:07:14 -0700</pubDate>
+      
+      <guid>http://fawx.com/categories/life/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

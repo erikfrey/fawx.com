@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fawx</title>
+    <link>http://fawx.com/</link>
+    <description>Recent content on fawx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jun 2018 09:41:14 -0700</lastBuildDate>
+    
+	<atom:link href="http://fawx.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://fawx.com/about/</link>
+      <pubDate>Thu, 28 Jun 2018 09:41:14 -0700</pubDate>
+      
+      <guid>http://fawx.com/about/</guid>
+      <description>I’m just a simple homeboy, and take no great interest in anything beyond the Magellanic Clouds. Marshall Savage
+ I maintain this website mostly out of nostalgia and loyalty to a past self that believed websites were an important part of one&amp;rsquo;s legacy. Most of these posts are dated from years or decades ago - messages in a bottle from an old, long-expired Erik.
+Now I spend more effort on living a meaningful life, and less effort on documenting it.</description>
+    </item>
+    
+    <item>
+      <title>Hi, Kiddo.</title>
+      <link>http://fawx.com/post/2015-03-19-hi-kiddo/</link>
+      <pubDate>Thu, 19 Mar 2015 15:07:14 -0700</pubDate>
+      
+      <guid>http://fawx.com/post/2015-03-19-hi-kiddo/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m not sure when you&amp;rsquo;ll receive this.  Time machines, even the ones that only travel forward, are tricky to aim.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
