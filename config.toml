@@ -1,0 +1,46 @@
+baseURL = "http://fawx.com/"
+languageCode = "en-us"
+title = "fawx"
+theme = "hugo-nederburg-theme"
+
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+preserveTaxonomyNames = true
+paginate = 5 #frontpage pagination
+
+[params]
+  slogan = "some old and new ideas"
+  description = "Erik Frey's personal blog" # meta description
+  author = "Erik Frey"
+  authorLink = "http://fawx.com/"
+  bio = [
+    "Erik isn't quite sure who he is - his bio is in flux right now.",
+    "Please try again later."
+  ]
+  copyright = [
+    "&copy; 2003 Erik Frey",
+  ]
+
+  # for gravatar
+  email = "misc@fawx.com"
+
+  # Nav links in the side bar
+  [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "About"
+  url = "about/"
+  weight = 2
+
+  [params.social]
+  facebook      = "https://www.facebook.com/therealerikfrey"
+  email         = "misc@fawx.com"
+  linkedin      = "https://www.linkedin.com/in/therealerikfrey/"
+  github        = "https://github.com/erikfrey"
+  flickr        = "https://www.flickr.com/photos/erikfrey/"
+  rss           = true
