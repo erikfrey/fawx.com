@@ -10,29 +10,29 @@
              "@type": "WebPage",
              "@id": "http://fawx.com/"
         },
-        "articleSection" : "",
-        "name" : "About",
-        "headline" : "About",
-        "description" : "I’m just a simple homeboy, and take no great interest in anything beyond the Magellanic Clouds. Marshall Savage
- I maintain this website mostly out of nostalgia and loyalty to a past self that believed websites were an important part of one&rsquo;s legacy. Most of these posts are dated from years or decades ago - messages in a bottle from an old, long-expired Erik.
-Now I spend more effort on living a meaningful life, and less effort on documenting it.",
+        "articleSection" : "post",
+        "name" : "An Ode to Set Intersection",
+        "headline" : "An Ode to Set Intersection",
+        "description" : "<p>This here is Norman Casagrande, last.fm’s former head researcher and my former mentor.  The facial expression seen here is one of my favorites.  It’s usually accompanied by some questionably-translated Italian aphorism, ”You know, Erik, that is like the ox saying ‘horned’ to the donkey.”</p>
+
+<p></p>",
         "inLanguage" : "pt-BR",
         "author" : "",
         "creator" : "",
         "publisher": "",
         "accountablePerson" : "",
         "copyrightHolder" : "",
-        "copyrightYear" : "2018",
-        "datePublished": "2018-06-28 09:41:14 -0700 PDT",
-        "dateModified" : "2018-06-28 09:41:14 -0700 PDT",
-        "url" : "http://fawx.com/about/",
-        "wordCount" : "86",
+        "copyrightYear" : "2009",
+        "datePublished": "2009-10-26 15:07:14 -0700 PDT",
+        "dateModified" : "2009-10-26 15:07:14 -0700 PDT",
+        "url" : "http://fawx.com/post/2009-10-26-an-ode-to-set-intersection/",
+        "wordCount" : "599",
         "image" : http://fawx.com/%!s(&lt;nil&gt;)",
         "keywords" : [ "Blog" ]   
     }
     </script>
 
- <title>About </title>
+ <title>An Ode to Set Intersection </title>
 
 
 <meta name="description" content="Erik Frey&#39;s personal blog" />
@@ -209,7 +209,7 @@ Now I spend more effort on living a meaningful life, and less effort on document
 
         
         <div class="entry-meta">
-          <span class="date">28 June</span>	<span> / </span>
+          <span class="date">26 October</span>	<span> / </span>
 
           <span class="author">
             
@@ -219,30 +219,92 @@ Now I spend more effort on living a meaningful life, and less effort on document
 
 
           
+          <span class="category">
+            <span> / </span>
+
+            <a href="/categories/craft">craft</a>
+          </span>
+          
 
 
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'> About</h1>
+          <h1 class='entry-title'> An Ode to Set Intersection</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <blockquote>
-<p>I’m just a simple homeboy, and take no great interest in anything beyond the Magellanic Clouds.
-<cite>Marshall Savage</cite></p>
-</blockquote>
+              <p>This here is Norman Casagrande, last.fm’s former head researcher and my former mentor.  The facial expression seen here is one of my favorites.  It’s usually accompanied by some questionably-translated Italian aphorism, ”You know, Erik, that is like the ox saying ‘horned’ to the donkey.”</p>
 
-<p>I maintain this website mostly out of nostalgia and loyalty to a past self that believed websites were an important part of one&rsquo;s legacy.  Most of these posts are dated from years or decades ago - messages in a bottle from an old, long-expired Erik.</p>
+<p></p>
 
-<p>Now I spend more effort on living a meaningful life, and less effort on documenting it.  That has worked out, more or less.</p>
+<p>
+<figure class="alignright">
+    
+        <img src="/img/2009/10/norman_casagrande.jpg" alt="Norman Casagrande" />
+    
+    
+</figure>
+ This smarmy smile also usually means I’m about to learn something new.  I saw it my very first day at last.fm.  Norman was describing to me various gears and nozzles that power last.fm’s recommendations, and when he showed me the code that compares two musical items, I stopped him.  I saw my chance to strike.</p>
 
+<h2 id="set-intersection">Set Intersection</h2>
+
+<p>Set intersection is a delightful little haiku problem in computer science.  It’s simple, elegant, and is ubiquitous in search engine tech, collaborative filtering mechanisms, various types of matrix math&hellip; probably other places, too!  Its most basic implementation is linear in complexity, and most people are happy with linear performance here.  But as I studied the guts of Norman’s recommendation engine, I saw my first opportunity to unleash unspeakable power!</p>
+
+<p>“Norman, what if I told you that there are set intersections much more efficient than this?  In fact, I know of one that uses a search algorithm that is&hellip;”, I whispered almost breathlessly, “<em>log-log</em>!”</p>
+
+<p>“Ehhh, you can try but I don’t think it will be faster.  But you throw the spaghetti at the ceiling propeller and we will see what stays there.”  And out came that infuriating smile.</p>
+
+<p>So I set about to wipe that smile off Norman’s face.  I was going to write the Rolls-Royce jet engine of all set intersection algorithms.</p>
+
+<h2 id="binary-and-interpolation-search">Binary and Interpolation Search</h2>
+
+<p>To write my code I drew from the experience I’d had at a job interview with Google some time before.  A smart scientist had quizzed me about interpolation search, a way of finding elements in sorted sets by making educated guesses as to their location.  He claimed it had contributed greatly to the performance of operations at Google, so I was sure it could do the same for me.</p>
+
+<p>In turn I’d found a really excellent paper on set intersection, <a href="https://pdfs.semanticscholar.org/4f5b/11f8b1962e70fec7266c2715bd7d22cfbf04.pdf">A Fast Set Intersection Algorithm for Sorted Sequences</a>.  This paper proposes the following algorithm:</p>
+
+<ol>
+<li>Pick the median element, A, in the smaller set.</li>
+<li>Search for its insertion-position element, B, in the larger set.</li>
+<li>If A and B are equal, append the element to the result.</li>
+<li>Repeat steps 1-4 on non-empty subsets on either side of elements A and B.</li>
+</ol>
+
+<p>The paper showed that this algorithm does particularly well when one set is smaller than the other.  Just to be sure, I wrote code to count the number of comparisons for three kinds of set intersection: plain old linear set intersection, the paper&rsquo;s set intersection using double binary search, and my own variant using interpolation search.</p>
+
+<p>View/download the source for this experiment from my <a href="https://github.com/erikfrey/themas">themas github repository</a>.  You can profile the algorithms on uniform random data by building the project and running:</p>
+
+<pre><code>hexdump -e '1/4 &quot; %u&quot;' /dev/urandom | ./set_intersection_profile binary compares 100000 0.1 1.0 0.1 20
+</code></pre>
+
+<p>The results were exactly what I’d hoped, looking at the number of comparisons as I varied the ratio between the two set sizes:</p>
+
+
+<figure class="size-auto">
+    
+        <img src="/img/2009/10/set_intersection_comparisons.jpg" alt="Set Intersection Comparisons" />
+    
+    
+</figure>
+
+
+<p>Not only did the interpolation intersection use far fewer comparisons in the case where <strong>M</strong> &lt;&lt; <strong>N</strong>, but it performed better than linear everywhere else, too!  Armed with this knowledge, I was ready to take Norman down.</p>
+
+<p>To be continued!</p>
+
+<p>p.s. For the observant programmer that is curious as to why the linear intersection’s line isn’t flat in the graph above, see <a href="https://github.com/erikfrey/themas/commit/e734e20712404bd403d7e103673d4b253df75247">this commit</a> and maybe read about <code>__builtin_expect</code>.  You’ll figure it out!</p>
             </article>
           </div>
           
       <div class='entry-meta-bottom'>
         
 
+  
+  <div class="entry-categories"><p><span>Categories</span>
+    
+    <a href="/categories/craft" title="View all posts in craft">craft</a>
+  </p>
+</div>
   
 
 

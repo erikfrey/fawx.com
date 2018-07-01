@@ -13,7 +13,18 @@
   </url>
   
   <url>
+    <loc>http://fawx.com/post/2009-10-26-an-ode-to-set-intersection/</loc>
+    <lastmod>2009-10-26T15:07:14-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fawx.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://fawx.com/categories/craft/</loc>
+    <lastmod>2009-10-26T15:07:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
