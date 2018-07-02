@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on fawx</title>
-    <link>http://fawx.com/post/</link>
+    <link>https://fawx.com/post/</link>
     <description>Recent content in Posts on fawx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Mar 2015 15:07:14 -0700</lastBuildDate>
     
-	<atom:link href="http://fawx.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fawx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hi, Kiddo.</title>
-      <link>http://fawx.com/post/2015-03-19-hi-kiddo/</link>
+      <link>https://fawx.com/post/2015-03-19-hi-kiddo/</link>
       <pubDate>Thu, 19 Mar 2015 15:07:14 -0700</pubDate>
       
-      <guid>http://fawx.com/post/2015-03-19-hi-kiddo/</guid>
+      <guid>https://fawx.com/post/2015-03-19-hi-kiddo/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m not sure when you&amp;rsquo;ll receive this.  Time machines, even the ones that only travel forward, are tricky to aim.
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>An Ode to Set Intersection</title>
-      <link>http://fawx.com/post/2009-10-26-an-ode-to-set-intersection/</link>
+      <link>https://fawx.com/post/2009-10-26-an-ode-to-set-intersection/</link>
       <pubDate>Mon, 26 Oct 2009 15:07:14 -0700</pubDate>
       
-      <guid>http://fawx.com/post/2009-10-26-an-ode-to-set-intersection/</guid>
+      <guid>https://fawx.com/post/2009-10-26-an-ode-to-set-intersection/</guid>
       <description>&lt;p&gt;This here is Norman Casagrande, last.fm’s former head researcher and my former mentor.  The facial expression seen here is one of my favorites.  It’s usually accompanied by some questionably-translated Italian aphorism, ”You know, Erik, that is like the ox saying ‘horned’ to the donkey.”&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
