@@ -1,4 +1,4 @@
-baseURL = "http://fawx.com/"
+baseURL = "https://fawx.com/"
 languageCode = "en-us"
 title = "fawx"
 theme = "hugo-nederburg-theme"
@@ -14,7 +14,7 @@ paginate = 5 #frontpage pagination
   slogan = "some old and new ideas"
   description = "Erik Frey's personal blog" # meta description
   author = "Erik Frey"
-  authorLink = "http://fawx.com/"
+  authorLink = "https://fawx.com/"
   bio = [
     "Erik isn't quite sure who he is - his bio is in flux right now.",
     "Please try again later."
