@@ -165,7 +165,7 @@ ol {
   padding: 0;
   margin: 1.5em;
 }
-ul ul, ul ol, 
+ul ul, ul ol,
 ol ul,
 ol ol {
   margin: 0 1.5em;
@@ -232,7 +232,7 @@ th {
 .alignleft,
 .aligncenter,
 .alignnone,
-.size-auto, 
+.size-auto,
 .size-full,
 .size-large,
 .size-medium,
@@ -464,6 +464,10 @@ a img {
   opacity: 0.6;
   -webkit-transition: opacity 0.2s ease;
           transition: opacity 0.2s ease;
+  background-image: url(/img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 0px 2px;
+  padding: 0 0 0 48px;
 }
 .site-title span {
   opacity: 0;
@@ -534,6 +538,7 @@ a img {
 .site-header .site-description {
   opacity: 0;
   color: white;
+  padding: 0 0 0 48px;
 }
 
 .menu-unset > ul,
@@ -2724,4 +2729,3 @@ li.pingback:first-child {
     width: 500px !important;
   }
 }
-
