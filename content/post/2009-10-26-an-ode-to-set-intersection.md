@@ -2,6 +2,8 @@
 title: "An Ode to Set Intersection"
 date: 2009-10-26T15:07:14-07:00
 categories: ["craft"]
+aliases:
+  - /2009/10/26/an-ode-to-set-intersection-part-1/
 draft: false
 ---
 
