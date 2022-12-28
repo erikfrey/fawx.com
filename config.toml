@@ -1,0 +1,6 @@
+baseURL = 'http://fawx.com/'
+languageCode = 'en-us'
+title = 'Erik Frey'
+theme = "fawx"
+[permalinks]
+  posts = "/:title"

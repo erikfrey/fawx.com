@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>{{ .Site.Title }}</h1>
+  {{ $bundle := .Site.GetPage "about" }}
+  <div class="group">
+  {{ range sort ($bundle.Resources.Match "section*") ".Name"  }}
+  {{ if .Title }}
+  </div><h1>{{ .Title }}</h1><div class="group">
+  {{ end }}
+  <div class="item">{{ .Content }}</div>
+  {{ end }}
+  </div>
+{{ end }}

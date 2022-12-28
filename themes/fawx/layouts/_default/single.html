@@ -1,0 +1,7 @@
+{{ define "main" }}
+  {{ if .Title }}
+  <h1>{{ .Title }}</h1>
+  {{ end }}
+  <div class="item">{{ .Content }}</div>
+  &mdash; <a href="/">Erik</a>, {{ .PublishDate.Format "January 2006" }}
+  {{ end }}
