@@ -4,4 +4,4 @@ draft: false
 break: true
 ---
 
-![self portrait](img/self_portrait.png)
+![self portrait](img/self_portrait.jpg)
